@@ -1,4 +1,4 @@
-# COMPREHENDING 
+# COMPREHENDING COMMANDS
 
 ## Challenge 1: Cat not the pet, the command!
 **Overview:** cat is most often used for reading out files; cat will concatenate multiple files if provided multiple arguments.
