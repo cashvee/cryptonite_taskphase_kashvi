@@ -15,7 +15,7 @@ Correct argument! Here is the /flag file:`
 **Flag:** pwn.college{okcyWx2MdlgGTxc8s1oVDJHFXun.dVjM5QDL0UTO0czW}
 
 ## Challenge 3: Reading Manuals
-**Overviews:** This level introduces the man command. 
+**Overview:** This level introduces the man command. 
 man is short for manual, and will display (if available) the manual of the command you pass as an argument.
 hen you're done reading the manpage, you can hit q to quit.
 
@@ -26,7 +26,7 @@ Correct usage! Your flag: `
 **Flag:** pwn.college{QU5PK6fTYETr4YKoUX2skjWUZVd.dRTM4QDL0UTO0czW}
 
 ## Challenge 4: Searching Manuals
-**Overviews:** You can scroll man pages with the arrow keys (and PgUp/PgDn) and search with /.
+**Overview:** You can scroll man pages with the arrow keys (and PgUp/PgDn) and search with /.
 After searching, you can hit n to go to the next result and N to go to the previous result. 
 Instead of /, you can use ? to search backwards!
 Find the option that will give you the flag by reading the challenge man page.
@@ -44,7 +44,7 @@ Correct usage! Your flag: `
 **Flag:** pwn.college{gqQCx0D5LldYRzEwC1WJsJ_A6z1.dVTM4QDL0UTO0czW}
 
 ## Challenge 5: Searching For Manuals
-**Overviews:** 
+**Overview:** 
 ran: man -k challenge -> gave a list of all man pages related to the keyword "challenge"
 `hacker@man~searching-for-manuals:~$ man -k challenge
 qfwxiopxwq (1)       - print the flag!`
@@ -58,14 +58,27 @@ Correct usage! Your flag: `
 
 **Flag:** pwn.college{EqIf9wK_2SxKFNiE9opSKxwXqQ2.dZTM4QDL0UTO0czW}
 
-6 - hacker@man~helpful-programs:~$ /challenge/challenge -p
+## Challenge 6: HELPFUL PROGRAMS
+**OVERVIEW:** 
+
+**COMMANDS:**
+`/challenge/challenge --help 
+hacker@man~helpful-programs:~$ /challenge/challenge -p
 The secret value is: 494
 hacker@man~helpful-programs:~$ /challenge/challenge -g 494
-Correct usage! Your flag: **pwn.college{UDFJhwnMBpzDbNh4cNI9Af-v_mJ.ddjM4QDL0UTO0czW}**
-hacker@man~helpful-programs:~$
+Correct usage! Your flag:`
 
-7 - builtins 
-**Overview:**
+**FLAG**
+pwn.college{UDFJhwnMBpzDbNh4cNI9Af-v_mJ.ddjM4QDL0UTO0czW}
+
+## Challenge 7: builtins 
+**Overview:** Builtins are invoked just like commands, but the shell handles them internally instead of launching other programs.
+
 **Command(s):**
+`hacker@man~help-for-builtins:~$ help challenge
+hacker@man~help-for-builtins:~$ cd /challenge
+hacker@man~help-for-builtins:/challenge$ challenge --secret 8ZeDaMpX
+Correct! Here is your flag!`
+
 **Flag:** pwn.college{8ZeDaMpXzSKEGQuus4nb5u6qzRf.dRTM5QDL0UTO0czW}
 
