@@ -64,4 +64,8 @@ hacker@man~helpful-programs:~$ /challenge/challenge -g 494
 Correct usage! Your flag: **pwn.college{UDFJhwnMBpzDbNh4cNI9Af-v_mJ.ddjM4QDL0UTO0czW}**
 hacker@man~helpful-programs:~$
 
-7 - 
+7 - builtins 
+**Overview:**
+**Command(s):**
+**Flag:** pwn.college{8ZeDaMpXzSKEGQuus4nb5u6qzRf.dRTM5QDL0UTO0czW}
+
