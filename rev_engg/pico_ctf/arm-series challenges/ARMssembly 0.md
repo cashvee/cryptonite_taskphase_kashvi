@@ -3,7 +3,9 @@ What integer does this program print with
 arguments 4112417903 and 1169092511? 
 File: chall.S 
 Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits.
-ex. 5614267 would be picoCTF{0055aabb})
+
+**Convert 4134207980 into a 32 bit hex string**
+**Flag:** picoCTF{f5f5f5f4}
 
 I would say that I am somewhat comfortable with classic x86 assembly, but I had to learn about ARM for this challenge
 
