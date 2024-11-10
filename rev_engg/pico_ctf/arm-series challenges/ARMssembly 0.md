@@ -8,7 +8,9 @@ ex. 5614267 would be picoCTF{0055aabb})
 I would say that I am somewhat comfortable with classic x86 assembly, but I had to learn about ARM for this challenge
 
 this is pure gpt info, that I needed to refer as I went along with this challenge.
-In ARM assembly language, the instructions and directives you mentioned serve different purposes, from performing operations to defining sections and managing data. Here’s a brief explanation of each:
+
+In ARM assembly language, the instructions and directives you mentioned serve different purposes, from performing operations to defining sections and managing data. 
+Here’s a brief explanation of each:
 
 ### Instructions
 
