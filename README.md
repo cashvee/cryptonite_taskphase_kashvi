@@ -1,16 +1,6 @@
 ## cryptonite_taskphase_kashvi
 All work done in the task phase is uploaded here.
 
-**modules finished (09/10/24)**
-
-• Hello Hackers
-
-• Pondering Paths
-
-• Comprehending Commands
-
-• Digesting Documentation
-
-• File Globbing
-
-• Practicing Piping
+tp1 - pwn.college - LINUX LUMINARIUM 
+tp2 - PicoCTF - vault door+arm asm 
+    - pwn.college - rev engg challenges 
