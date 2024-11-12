@@ -1,12 +1,11 @@
 I wanted to see if it was possible to run vim in ubuntu itself. 
 At first I was very confused, since it took me some time to figure out what the prof. in the video lectures provided is doing.
 
-So I searched it up and apparently something called ~vim-tiny~ comes pre-installed with ubuntu
+So I searched it up and apparently something called `vim-tiny` comes pre-installed with ubuntu.
 
 but if you need the full version with additional features, you can install it using:
-
-sudo apt update
-sudo apt install vim
+`sudo apt update
+sudo apt install vim`
 
 which I did.
 and also learned about the basic commands!
