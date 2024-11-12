@@ -1,14 +1,22 @@
 # Vault Door3
 
-##Description
+## Description
 This vault uses for-loops and byte arrays. 
 The source code for this vault is here: VaultDoor3.java
 
 **flag:**
 picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}
 
+## **Writeup:**
+In this challenge, the `checkPassword` function in `VaultDoor3` rearranges characters from a password input using specific for-loop patterns. 
 
-**brute force code I used to get flag:**
+To find the correct input, I reversedd these patterns in my brute-force code (`VaultDoor3brute`) to re-construct the required password.
+
+The targey password string is given as `"jU5t_a_sna_3lpm18g947_u_4_m9r54f"`. Using the same for-loop logic but adjusted to directly fill in the correct positions, I built a `password` array to match the target string structure. 
+
+Finally, printing the `password` array gives the required input string for the flag.
+
+## **brute force code I used to get flag:**
 ```
 import java.util.*;
 
@@ -44,7 +52,7 @@ class VaultDoor3brute {
 }
 ```
 
-**source code:**
+## **source code:**
 ```
 import java.util.*;
 
