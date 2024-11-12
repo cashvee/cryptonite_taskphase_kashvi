@@ -1,11 +1,31 @@
-##Description
+## Description
 Apparently Dr. Evil's minions knew that our agency was making copies of their source code, because they intentionally sabotaged this source code in order to make it harder for our agents to analyze and crack into! The result is a quite mess, but I trust that my best special agent will find a way to solve it. 
 The source code for this vault is here: VaultDoor8.java
 
 **flag:**
 picoCTF{s0m3_m0r3_b1t_sh1fTiNg_89eb3994e}
 
-**brute - rev engg code:**
+## Writeup
+I defined the scrambled expected array.
+The unscramble method reverses the bit swaps applied in the original scrambling process.
+The unscrambled characters are combined into the password and printed as picoCTF{s0m3_m0r3_b1t_sh1fTiNg_89eb3994e}.
+
+The scramble method in VaultDoor8 scrambles each character in the password by repeatedly switching specific pairs of bits. The scramblin is:
+
+Switch bits 1 and 2
+Switch bits 0 and 3
+Switch bits 5 and 6
+Switch bits 4 and 7
+Switch bits 0 and 1
+Switch bits 3 and 4
+Switch bits 2 and 5
+Switch bits 6 and 7
+
+To retrieve the original password, I reversed this scrambling sequence in the unscramble method in the brute-force code. Each bit switch operation in unscramble is the opposite of the sequence in scramble. from starting from the last operation and going backward. By applyingg this reversed sequence to each scrambled character in the expected array, I re-construct the original characters of password.
+
+
+## **brute - rev engg code:**
+```
 import java.util.*;
 
 public class VaultDoor8 {
@@ -70,8 +90,9 @@ public class VaultDoor8 {
         return (char)((bit1 << shift) | (bit2 >> shift) | rest);
     }
 }
+```
 
-**source code:** (after cleanup)
+## **source code:** (after cleanup)
 
 // These pesky special agents keep reverse engineering our source code and then
 // breaking into our secret vaults. THIS will teach those sneaky sneaks a
@@ -142,3 +163,4 @@ class VaultDoor8 {
         return Arrays.equals(scrambled, expected);
     }
 }
+```
