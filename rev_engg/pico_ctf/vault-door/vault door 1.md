@@ -8,7 +8,7 @@ The source code for this vault is here: VaultDoor1.java
 
 indexs were all jumbled, so I arranged it, found the password array and that was the flag:)
 
-**source code: ** 
+**source code:** 
 ```
 import java.util.*;
 
