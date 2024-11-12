@@ -92,7 +92,7 @@ main:
         **cmp     w0, 0**  
 ```
     
-For the program to print **"You win!"** , the value in register w0 must be zero after the function execution. If w0 isn’t zero, the program branches to .L4, which subsequently goes to .L1, resulting in a "You Lose :(" message. To avoid this, w0 should end up with a value of 0.
+If we check the cmp function, for the program to print **"You win!"** , the value in register w0 must be zero after the function execution. If w0 isn’t zero, the program branches to .L4, which subsequently goes to .L1, resulting in a "You Lose :(" message. To avoid this, w0 should end up with a value of 0.
 
 In the sub w0, w1, w0 line (highlighted with the star ⭐), the operation computes 90 - user input and stores it in w0. For w0 to be 0, the user input must be 90. Therefore, the argument needed to trigger the win condition is 90.
 
