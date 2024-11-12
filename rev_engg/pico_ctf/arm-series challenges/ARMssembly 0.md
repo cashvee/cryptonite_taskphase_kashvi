@@ -2,14 +2,17 @@
 What integer does this program print with 
 arguments 4112417903 and 1169092511? 
 File: chall.S 
-Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits.
+Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits.)
 
-**Convert 4134207980 into a 32 bit hex string**
+**What I did:**
+Before branching to .L3, value of [sp, 12] is being load and then printed. 
+So we convert 4112417903 to a 32 bit hex string which is the flag
+
 **Flag:** picoCTF{f5f5f5f4}
 
-I would say that I am somewhat comfortable with classic x86 assembly, but I had to learn about ARM for this challenge
+I had to learn about ARM Assembly for this challenge
 
-this is pure gpt info, that I needed to refer as I went along with this challenge.
+this is the info that I referred to, as I went along with this challenge.
 
 In ARM assembly language, the instructions and directives you mentioned serve different purposes, from performing operations to defining sections and managing data. 
 Here’s a brief explanation of each:
@@ -89,5 +92,3 @@ Here’s a brief explanation of each:
     - **Operation**: Loads two values from memory into two registers at once.
     - **Example**: `ldp x29, x30, [sp], 48` loads values from the stack into `x29` and `x30`, then updates `sp` to point to the next address after the loaded data.
 
-### Summary
-These instructions and directives form the core of programming in ARM assembly language, enabling you to manipulate data, control program flow, and structure your code effectively. Each serves a specific purpose that contributes to the overall functionality of the assembly program.
