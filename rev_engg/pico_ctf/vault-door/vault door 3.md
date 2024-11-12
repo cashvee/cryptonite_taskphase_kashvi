@@ -1,4 +1,4 @@
-#Vault Door3
+# Vault Door3
 
 ##Description
 This vault uses for-loops and byte arrays. 
@@ -9,14 +9,15 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}
 
 
 **brute force code I used to get flag:**
-`import java.util.*;
+```
+import java.util.*;
 
-`class VaultDoor3brute {
+class VaultDoor3brute {
     public static void main(String args[]) {
         VaultDoor3brute vaultDoor = new VaultDoor3brute();
         String requiredPassword = vaultDoor.revealPassword();
         System.out.println("The correct password should be: picoCTF{" + requiredPassword + "}");
-    }`
+    }
 
     public String revealPassword() {
         // Target password string we want in the buffer
@@ -41,9 +42,10 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}
         return new String(password);
     }
 }
-`
+```
 
 **source code:**
+```
 import java.util.*;
 
 class VaultDoor3 {
@@ -87,4 +89,4 @@ class VaultDoor3 {
         return reconstructedPassword.equals("jU5t_a_sna_3lpm18g947_u_4_m9r54f");
     }
 }
-
+```
