@@ -1,6 +1,6 @@
-#vault door 1 
+# vault door 1 
 
-##description: This vault uses some complicated arrays! 
+## description: This vault uses some complicated arrays! 
 I hope you can make sense of it, special agent. 
 The source code for this vault is here: VaultDoor1.java
 
@@ -8,7 +8,8 @@ The source code for this vault is here: VaultDoor1.java
 
 indexs were all jumbled, so I arranged it, found the password array and that was the flag:)
 
-**source code: **
+**source code: ** 
+```
 import java.util.*;
 
 class VaultDoor1 {
@@ -67,5 +68,6 @@ class VaultDoor1 {
                password.charAt(31) == '0';  
     }
 }
+```
 
 
