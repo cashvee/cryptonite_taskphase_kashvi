@@ -26,8 +26,11 @@ func:
         str     w0, [sp, 24]
 ```
 stack + 12 = user input
+
 stack + 16 = 68
+
 stack + 20 = 2
+
 stack + 24 = 3
 ```
         ldr     w0, [sp, 20] --> load "2" into w0
@@ -42,9 +45,13 @@ stack + 24 = 3
 ```
 
 stack + 12 = user input
+
 stack + 16 = 68
+
 stack + 20 = 2
+
 stack + 24 = 3
+
 stack + 28 = 90
 
 ```
@@ -83,13 +90,13 @@ main:
         ldr     w0, [x29, 44]
         bl      func
         **cmp     w0, 0**  
-    ```  
+```
     
 For the program to print **"You win!"** , the value in register w0 must be zero after the function execution. If w0 isn’t zero, the program branches to .L4, which subsequently goes to .L1, resulting in a "You Lose :(" message. To avoid this, w0 should end up with a value of 0.
 
 In the sub w0, w1, w0 line (highlighted with the star ⭐), the operation computes 90 - user input and stores it in w0. For w0 to be 0, the user input must be 90. Therefore, the argument needed to trigger the win condition is 90.
 
-    ```
+```
         bne     .L4
         adrp    x0, .LC0
         add     x0, x0, :lo12:.LC0
