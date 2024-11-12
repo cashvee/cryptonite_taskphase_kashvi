@@ -9,6 +9,7 @@ The source code for this vault is here: VaultDoor4.java
 converted all values to ascii using an online ascii converter and got the flag.
 
 ## **source code:**
+```
 import java.util.*;
 
 class VaultDoor4 {
@@ -55,3 +56,4 @@ class VaultDoor4 {
         return true; 
     }
 }
+```
