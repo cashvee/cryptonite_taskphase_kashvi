@@ -5,16 +5,14 @@ What integer does this program print with argument 2907278761? File: chall_4.S
 program code is large, added at the end.
 
 **Writeup:**
-The program starts in main, which calls func1 with the integer argument 2907278761. 
 
+The program starts in main, which calls func1 with the integer argument 2907278761. 
 In func1, it checks if the value is less than or equal to 100. 
 
 Since it’s not, it adds 100 to the input (making it 2907278861) and calls func2.
-
 In func2, the value 2907278861 is compared to 499. 
 
 Since it’s greater, it adds 13 (resulting in 2907278874) and calls func5, which calls func8. 
-
 func8 adds 2, giving the final result of 2907278876.
 
 ```
