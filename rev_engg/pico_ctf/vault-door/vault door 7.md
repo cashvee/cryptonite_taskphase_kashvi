@@ -1,12 +1,38 @@
-#Vault Door 7
+# Vault Door 7
 
-##Description
+## Description
 This vault uses bit shifts to convert a password string into an array of integers. Hurry, agent, we are running out of time to stop Dr. Evil's nefarious plans! 
 The source code for this vault is here: VaultDoor7.java
 
-picoCTF{A_b1t_0f_b1t_sh1fTiNg_07990cd3b6}
+**flag:** picoCTF{A_b1t_0f_b1t_sh1fTiNg_07990cd3b6}
 
-**bruteforce code:**
+## Writeup
+to decode each integer in targetValues into four ASCII characters to reconstruct the password.
+
+
+Each integer holds four characters packed as bytes:
+I used bit shifting to isolate each byte: value >> 24, value >> 16, value >> 8, and the last byte directly.
+In a 32-bit integer:
+
+The first 8 bits represent the first character,
+The next 8 bits represent the second character,
+The third 8 bits represent the third character,
+The last 8 bits represent the fourth character.
+By shifting:
+
+value >> 24 moves the first 8 bits to the lowest position, isolating the first character.
+value >> 16 moves the second 8 bits to the lowest position, isolating the second character.
+value >> 8 does the same for the third character.
+The last character doesn’t require shifting because it’s already in the correct position.
+
+Each shift extracts a byte (8 bits) representing one character.
+
+
+After decoding all characters, they were combined to form the password string.
+Finally, I wrapped the password
+
+## **bruteforce code:**
+```
 public class VaultDoor7 {
     public static void main(String[] args) {
         // Given integer values in the checkPassword method
@@ -29,8 +55,10 @@ public class VaultDoor7 {
         System.out.println("The password is: picoCTF{" + password.toString() + "}");
     }
 }
+```
 
-**source code:**
+## **source code:**
+```
 import java.util.*;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -98,4 +126,4 @@ class VaultDoor7 {
                 && x[7] == 1681089078;
     }
 }
-
+```
