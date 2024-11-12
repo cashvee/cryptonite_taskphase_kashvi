@@ -1,17 +1,35 @@
-#Vault Door 5
+# Vault Door 5
 
-##Description
+## Description
 In the last challenge, you mastered octal (base 8), decimal (base 10), and hexadecimal (base 16) numbers, but this vault door uses a different change of base as well as URL encoding! 
 The source code for this vault is here: VaultDoor5.java
 
+## **Writeup**
+In this challenge, the checkPassword function in VaultDoor5 first URL-encodes the input password and then encodes the result in Base64 to check against a given encoded string.
+
+To solve it, I reversed this encoding process in my brute-force code (Vault5_rev). 
+Starting with the expected Base64 string, I decoded it to get a URL-encoded string. 
+Then, I decoded that string from URL encoding to reveal the actual password.
+
+This final decoded password provides the input required to unlock the vault and retrieve the flag.
+The Base64.getDecoder().decode() function in Java is used to decode a Base64-encoded string into its original byte array form.
+
+```
+Base64.getDecoder(): This part retrieves an instance of the Base64 decoder.
+.decode(String): This method of the decoder instance takes a Base64-encoded string as input and returns the decoded data as a byte array.
+```
+
+
 **FLAG:** picoCTF{c0nv3rt1ng_fr0m_ba5e_64_e3152bf4}
 
-**brute force code i used to rev engg:**
+## **brute force code i used:**
+```
 import java.net.URLDecoder;
 import java.util.Base64;
 
 public class Vault5_rev {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception
+{
         String expected = "JTYzJTMwJTZlJTc2JTMzJTcyJTc0JTMxJTZlJTY3JTVm"
                 + "JTY2JTcyJTMwJTZkJTVmJTYyJTYxJTM1JTY1JTVmJTM2"
                 + "JTM0JTVmJTY1JTMzJTMxJTM1JTMyJTYyJTY2JTM0";
@@ -26,9 +44,11 @@ public class Vault5_rev {
         System.out.println("Decoded password: " + password);
     }
 }
+```
 
 
-**source code:**
+## **source code:**
+```
 import java.net.URLDecoder;
 import java.util.*;
 
@@ -78,3 +98,4 @@ class VaultDoor5 {
         return base64Encoded.equals(expected);
     }
 }
+```
