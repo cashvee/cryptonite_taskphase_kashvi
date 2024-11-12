@@ -10,7 +10,9 @@ sudo apt install vim`
 which I did.
 and also learned about the basic commands! and ran a simple hello world program
 `vi hello.c
+
 gcc -o hello hello.c //to compile. I had to install gcc asw lol
+
 ./hello //to run it`
 
 1. **Opening a File**:
