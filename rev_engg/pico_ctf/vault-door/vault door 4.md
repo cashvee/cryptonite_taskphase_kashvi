@@ -1,14 +1,14 @@
-#Vault Door 4 
+# Vault Door 4 
 
-##Description
+## Description
 This vault uses ASCII encoding for the password. 
 The source code for this vault is here: VaultDoor4.java
 
-picoCTF{jU5t_4_bUnCh_0f_bYt3s_c194f7458e}
+**flag:** picoCTF{jU5t_4_bUnCh_0f_bYt3s_c194f7458e}
 
-converted all values to ascii as given in the description and got the flag.
+converted all values to ascii using an online ascii converter and got the flag.
 
-**source code:**
+## **source code:**
 import java.util.*;
 
 class VaultDoor4 {
