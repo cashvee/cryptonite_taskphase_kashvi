@@ -1,9 +1,10 @@
-##Description
+## Description
 What integer does this program print with argument 3297082261? 
 File: chall_2.S 
 
 **flag:** picoCTF{4d9072bf}
 
+```
 func1:
         sub     sp, sp, #32
         str     w0, [sp, 12]
@@ -55,3 +56,31 @@ main:
         .size   main, .-main
         .ident  "GCC: (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 7.5.0"
         .section        .note.GNU-stack,"",@progbits
+```
+
+#### Objective
+To fibd the output for the argument `3297082261`.
+
+#### Code Analysis
+
+1. **Initial Setup**:
+   - `[sp, 12]` stores `3297082261` (ourr input).
+   - `[sp, 24]` and `[sp, 28]` start at 0.
+
+2. **Loop**:
+   - In each loop iteration:
+     - `[sp, 24]` increments by 3.
+     - `[sp, 28]` increments by 1.
+   - Loop continues until `[sp, 28]` matches `3297082261`.
+
+3. **Final Calculation**:
+   - After `3` iterations:
+     - `[sp, 24] = 3297082261 * 3 = 9891246783`.
+
+4. **Result**:
+   - Program prints `Result: 9891246783`.
+  
+     thus, our flag is the hex value of 9891246783.
+
+---
+
