@@ -1,8 +1,10 @@
+## Description
 What integer does this program print with argument 469937816? 
 File: chall_3.S 
 
 **FLAG:** picoCTF{00000024}
 
+```
 func1:
         stp     x29, x30, [sp, -48]!
         add     x29, sp, 0
@@ -73,4 +75,33 @@ ain:
         ret
         .size   main, .-main
         .ident  "GCC: (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 7.5.0"
-        .section        .note.GNU-stack,"",@progbits                                                                                                                    
+        .section        .note.GNU-stack,"",@progbits   
+```
+
+#### Analysis of the Codw:
+
+1. **Initial**:
+   - `[x29, 28]` stores the input `469937816`.
+   - `[x29, 44]` initializes to `0`.
+
+2. **Loop**:
+   - In each iteration, the program:
+     - Checks if `[x29, 28]` is odd using `and w0, w0, 1`.
+     - If odd, it calls `func2`, which adds **3** to `[x29, 44]`
+     - Right shifts `[x29, 28]` by 1.
+   - Loop continues until `[x29, 28]` becomes `0`.
+
+3. **`func2`**:
+   - Adds **3** to `[x29, 44]` each time its called.
+
+4. **Result**:
+   - The result is the total sum of **3** added to `[x29, 44]` each time an odd bit is encountered in `[x29, 28]`.
+   - Since `469937816` in binary has **12 odd bits**, `[x29, 44]` is `3 * 12 = 36`.
+
+5. **Output**:
+   - Program prints `Result: 36`.
+  
+     hex of 36 is 0x24 which is our flag.
+
+
+                                                                                                                 
