@@ -11,12 +11,12 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}
 **brute force code I used to get flag:**
 `import java.util.*;
 
-class VaultDoor3brute {
+`class VaultDoor3brute {
     public static void main(String args[]) {
         VaultDoor3brute vaultDoor = new VaultDoor3brute();
         String requiredPassword = vaultDoor.revealPassword();
         System.out.println("The correct password should be: picoCTF{" + requiredPassword + "}");
-    }
+    }`
 
     public String revealPassword() {
         // Target password string we want in the buffer
