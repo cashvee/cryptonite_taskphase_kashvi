@@ -1,3 +1,4 @@
+
 java file with source code was given
 read through to find: 
 public boolean checkPassword(String password) 
@@ -7,8 +8,8 @@ hence,
 **flag:**
 picoCTF{w4rm1ng_Up_w1tH_jAv4_be8d9806f18}
 
-**source code:**
-
+## **source code:**
+```
 import java.util.*;
 
 class VaultDoorTraining {
@@ -35,3 +36,4 @@ class VaultDoorTraining {
         return password.equals("w4rm1ng_Up_w1tH_jAv4_be8d9806f18");
     }
 }
+```
